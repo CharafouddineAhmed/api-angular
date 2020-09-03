@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 export class DashboardComponent implements OnInit {
   
-  readonly ROOT_URL = 'https://n0d3.di-marco.net/pms.api/metrics';  // ROOT_URL est de type string
+  readonly ROOT_URL = '<A_COMPLETER>';  // ROOT_URL est de type string
   results: any;
   interval: number  = 1 * 1000; // tous les secondes - a changer
   heure: number;
