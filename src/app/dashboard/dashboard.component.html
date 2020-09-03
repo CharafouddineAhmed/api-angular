@@ -1,0 +1,100 @@
+
+<!--<p> battery level {{ results.metrics.battery.level  }}</p>
+<p> battery health {{ results.metrics | json }}</p>-->
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content" role="main" class="overflow-hidden">
+    <!-- Features Section -->
+    <div class="container space-bottom-2 space-lg-3">
+        <!-- Title -->
+        <div class="w-lg-50 text-center mx-lg-auto mb-5">
+          <span class="d-block small font-weight-bold text-cap mb-2">dashboard</span>
+        </div>
+        <!-- End Title -->
+  
+        <!-- Features -->
+        <div class="w-lg-60 mx-lg-auto mb-5">
+          <div class="row mx-n2">
+            <div class="col-sm-4 px-2 mb-3 mb-sm-0">
+              <!-- Icon Block -->
+              <div class="border-dashed text-center rounded p-4">
+                
+                <h2 class="h3 mb-0">green</h2>
+                <p class="font-size-1">Network status</p>
+              </div>
+              <!-- End Icon Block -->
+            </div>
+  
+            <div class="col-sm-4 px-2 mb-3 mb-sm-0">
+              <!-- Icon Block -->
+              <div class="border-dashed text-center rounded p-4">
+                
+                <h3 class="mb-0">{{ results.metrics.battery.level  }} %</h3>
+                <p class="font-size-1">Battery</p>
+              </div>
+              <!-- End Icon Block -->
+            </div>
+  
+            <div class="col-sm-4 px-2">
+              <!-- Icon Block -->
+              <div class="border-dashed text-center rounded p-4">
+                
+                <h3 class="mb-0">{{ results.metrics.battery.health  }} %</h3>
+                <p class="font-size-1">Battery health</p>
+              </div>
+              <!-- End Icon Block -->
+            </div>
+          </div>
+        </div>
+        <!-- End Features -->
+  
+        <div class="w-lg-50 text-center mx-lg-auto mb-10">
+            <p> L'heure : {{ heure | date:'medium'}}</p>
+        </div>
+  
+        <div class="w-lg-65 text-center mx-lg-auto">
+          <div class="row">
+            
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Input</th>
+                    <th scope="col">System</th>
+                    <th scope="col">Battery</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><b>Temperature</b></th>
+                    <td>{{ results.metrics.input.temperature }} °C</td>
+                    <td>{{ results.metrics.system.temperature }} °C</td>
+                    <td>{{ results.metrics.battery.temperature }} °C</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><b>Voltage</b></th>
+                    <td>{{ results.metrics.input.voltage }} V</td>
+                    <td>{{ results.metrics.system.voltage }} V</td>
+                    <td>{{ results.metrics.battery.voltage }} V</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><b>Current</b></th>
+                    <td>{{ results.metrics.input.current }} A</td>
+                    <td>{{ results.metrics.system.current }} A</td>
+                    <td>{{ results.metrics.battery.current }} A</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><b>Power</b></th>
+                    <td>{{ results.metrics.input.current }} Watt</td>
+                    <td>{{ results.metrics.system.current }} Watt</td>
+                    <td>{{ results.metrics.battery.current }} Watt</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            
+          </div>
+        </div>
+      </div>
+      <!-- End Features Section -->
+</main>
